@@ -79,6 +79,24 @@ public class ControlerAlmoco {
         return almocos;
     }
 
+//    public List<AlmocoBean> buscaAlmoco(AlmocoBean alm){
+//        List<AlmocoBean> almocos = new ArrayList<>();
+//        String selectQuery = "SELECT * FROM ALMOCO WHERE ID LIKE ?";
+//        db = dbHelper.getWritableDatabase();
+//        String[] whereArgs = new String[] { "%" + parametro + "%"  };
+//        Cursor cursor = db.rawQuery(selectQuery, null);
+//        if (cursor.moveToFirst()){
+//            do{
+//                AlmocoBean almoco = new AlmocoBean();
+//                almoco.setId(""+cursor.getInt(0));
+//                almoco.setTipoAlmoco(""+cursor.getString(1));
+//                almoco.setDescricao(""+cursor.getString(2));
+//                almocos.add(almoco);
+//            } while (cursor.moveToNext());
+//        }
+//        return almocos;
+//    }
+
 
 
 

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button bebida, almoco;
+    Button bebida, almoco, pedido;
 
 
     @Override
@@ -17,8 +17,6 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         bebida = (Button) findViewById(R.id.bebida);
-//        textUsuLogado = (TextView) findViewById(R.id.lbUsuLogado);
-//        textUsuLogado.setText(usuLogado.getLogin());
         bebida.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent it = new Intent(MenuActivity.this, AddBebidaActivity.class);
@@ -34,12 +32,14 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-//        addUsu = (Button) findViewById(R.id.btnovousu);
-//        addUsu.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent it = new Intent(MenuActivity.this, AddUsuActivity.class);
-//                startActivity(it);
-//            }
-//        });
+        pedido = (Button) findViewById(R.id.pedido);
+        pedido.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent it = new Intent(MenuActivity.this, AddPedidoActivity.class);
+                startActivity(it);
+            }
+        });
+
+
     }
 }

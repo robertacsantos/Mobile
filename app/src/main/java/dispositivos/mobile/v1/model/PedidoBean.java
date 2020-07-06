@@ -39,4 +39,14 @@ public class PedidoBean implements Serializable {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public String toString() {
+        return "PedidoBean{" +
+                "id='" + id + '\'' +
+                ", idalmoco='" + idalmoco + '\'' +
+                ", idbebida='" + idbebida + '\'' +
+                ", descricao='" + descricao + '\'' +
+                '}';
+    }
 }

@@ -25,6 +25,7 @@ public class UptBebidaActivity extends AppCompatActivity {
         final EditText descricao = (EditText) findViewById(R.id.descricaoBebida);
         Intent it = getIntent();
         final BebidaBean recuperado = (BebidaBean) it.getSerializableExtra("Bebida");
+        System.out.println(recuperado + "OIUUUU");
         tipoBebida.setText(recuperado.getTipoBebida());
         descricao.setText(recuperado.getDescricao());
 

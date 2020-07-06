@@ -35,6 +35,17 @@
         <activity
             android:name=".views.UptBebidaActivity"
             android:label="Atualizar-Bebida"/>
+        <activity
+            android:name=".views.AddPedidoActivity"
+            android:label="Adicionar-Pedido"/>
+        <activity
+            android:name=".views.ListPedidoActivity"
+            android:label="Lista-Pedido"/>
+
+        <activity
+            android:name=".views.UptPedidoActivity"
+            android:label="Atualizar-Pedido"/>
+
 
     </application>
 
