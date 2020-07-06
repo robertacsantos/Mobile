@@ -51,16 +51,17 @@ public class ControlerPedido {
         db = dbHelper.getWritableDatabase();
         ContentValues valores;
         String retorno = "Registro alterado com sucesso";
+        String where = "ID = " + pedido.getId();
         valores = new ContentValues();
         valores.put("IDALMOCO", pedido.getIdalmoco());
         valores.put("IDBEBIDA", pedido.getIdbebida());
         valores.put("DESCRICAO", pedido.getDescricao());
-        db.update(BancoHelper.TABELA_P, valores, null, null);
+        db.update(BancoHelper.TABELA_P, valores, where, null);
         db.close();
         return retorno;
     }
 
-    public List<PedidoBean> listarAlmoco(){
+    public List<PedidoBean> listarPedido(){
         List<PedidoBean> pedidos = new ArrayList<>();
         String selectQuery = "SELECT * FROM PEDIDO";
         db = dbHelper.getWritableDatabase();

@@ -19,13 +19,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class AddPedidoActivity extends AppCompatActivity {
+public class UptPedidoActivity extends AppCompatActivity {
 
     Spinner listaAlmocos;
     Spinner listaBebidas;
     List bebidas;
     List almocos;
-    Button pedido, lista;
+    Button alterar, delPeb;
     EditText descricao;
 
 
@@ -34,7 +34,7 @@ public class AddPedidoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         try {
-            setContentView(R.layout.activity_add_pedido);
+            setContentView(R.layout.activity_upt_pedido);
             final ControlerAlmoco cntAlmoco = new ControlerAlmoco(getBaseContext());
             listaAlmocos = findViewById(R.id.spinneralmoco);
             almocos = cntAlmoco.listarAlmoco();
@@ -46,37 +46,40 @@ public class AddPedidoActivity extends AppCompatActivity {
             ArrayAdapter<BebidaBean> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, bebidas);
             listaBebidas.setAdapter(adapter1);
             descricao = (EditText) findViewById(R.id.descricaoPedido);
+            final ControlerPedido cntPedido = new ControlerPedido(getBaseContext());
+            Intent it = getIntent();
+            final PedidoBean recuperado = (PedidoBean) it.getSerializableExtra("Pedido");
 
-            pedido = (Button) findViewById(R.id.btinserir);
-            pedido.setOnClickListener(new View.OnClickListener() {
+            alterar = (Button) findViewById(R.id.btalterar);
+            alterar.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlmocoBean almoco = (AlmocoBean) listaAlmocos.getSelectedItem();
                     BebidaBean bebida = (BebidaBean) listaBebidas.getSelectedItem();
+                    System.out.println("oioi1");
                     String descricaoString = descricao.getText().toString();
-                    ControlerPedido cntPedido = new ControlerPedido(getBaseContext());
+                    recuperado.setIdalmoco(almoco.getId());
+                    recuperado.setIdbebida(bebida.getId());
+                    recuperado.setDescricao(descricaoString);
+                    System.out.println("passei o recuperado");
 
-                    PedidoBean pedido = new PedidoBean();
-                    pedido.setId("");
-                    pedido.setIdalmoco(almoco.getId());
-                    pedido.setIdbebida(bebida.getId());
-                    pedido.setDescricao(descricaoString);
-                    String aux = cntPedido.inserir(pedido);
+                    String aux = cntPedido.alterar(recuperado);
                     Toast.makeText(getApplicationContext(), aux, Toast.LENGTH_LONG).show();
                     System.out.println("ooooi");
-                    System.out.println(pedido.getDescricao() + "+" + pedido.getIdalmoco() + "+" + pedido.getIdbebida());
+                    System.out.println(recuperado.getDescricao() + "+" + recuperado.getIdalmoco() + "+" + recuperado.getIdbebida());
 
 
-                    Intent it = new Intent(AddPedidoActivity.this, MenuActivity.class);
+                    Intent it = new Intent(UptPedidoActivity.this, MenuActivity.class);
                     startActivity(it);
                     System.out.println("sai");
                 }
             });
-            lista = (Button) findViewById(R.id.btlistar);
-            lista.setOnClickListener(new View.OnClickListener() {
+            delPeb = (Button) findViewById(R.id.btexcluir);
+            delPeb.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent it = new Intent(AddPedidoActivity.this, ListPedidoActivity.class);
-                    startActivity(it);
+                    String msg = cntPedido.excluir(recuperado);
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
                 }
+
             });
         } catch (RuntimeException e) {
             System.out.println("ERRO!!" + e);
