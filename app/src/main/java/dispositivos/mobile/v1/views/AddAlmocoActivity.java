@@ -15,6 +15,7 @@ import dispositivos.mobile.v1.model.AlmocoBean;
 
 
 public class AddAlmocoActivity extends AppCompatActivity {
+    Button Inserir, teste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -22,7 +23,7 @@ public class AddAlmocoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_almoco);
         final ControlerAlmoco cntAlmoco = new ControlerAlmoco(getBaseContext());
-        Button Inserir = (Button) findViewById(R.id.btinserir);
+        Inserir = (Button) findViewById(R.id.btinserir);
 
         Inserir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +31,7 @@ public class AddAlmocoActivity extends AppCompatActivity {
 
                 EditText tipoAlmoco  = (EditText) findViewById(R.id.tipoAlmoco);
                 EditText descricao  = (EditText) findViewById((R.id.descricaoAlmoco));
-                Button teste;
+
 
                 String tipoAlmocoString = tipoAlmoco.getText().toString();
                 String descricaoString = descricao.getText().toString();
