@@ -33,9 +33,9 @@ public class BebidaBean implements Serializable {
 
     @Override
     public String toString() {
-        return "BebidaBean{" +
+        return "Bebida:" +
                 "id='" + id + '\'' +
-                ", tipoBebida='" + tipoBebida + '\'' +
+                ", Nome='" + tipoBebida + '\'' +
                 ", descricao='" + descricao + '\'' +
                 '}';
     }

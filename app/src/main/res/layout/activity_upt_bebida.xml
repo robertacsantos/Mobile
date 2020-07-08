@@ -1,35 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:background="@drawable/backbebida"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo Bebida"/>
-    <EditText
-        android:id = "@+id/tipoBebida"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:inputType = "text" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descricao"/>
-    <EditText
-        android:id = "@+id/descricaoBebida"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:inputType = "text" />
-    <Button
-        android:id = "@+id/btalterar"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:text = "@string/btalterar" />
-    <Button
-        android:id = "@+id/btexcluir"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:text = "@string/btexcluir" />
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#230C20"
+            android:text="Tipo Bebida"/>
+
+        <EditText
+            android:id = "@+id/tipoBebida"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_bebida"
+            android:layout_margin="5dp"
+            android:inputType = "text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#230C20"
+            android:text="Descricao"/>
+
+        <EditText
+            android:id = "@+id/descricaoBebida"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_bebida"
+            android:layout_margin="5dp"
+            android:inputType = "text" />
+        <Button
+            android:id = "@+id/btalterar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#230C20"
+            android:textColor="#FFFFFF"
+            android:text = "@string/btalterar" />
+        <Button
+            android:id = "@+id/btexcluir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#230C20"
+            android:textColor="#FFFFFF"
+            android:text = "@string/btexcluir" />
+    </LinearLayout>
+</ScrollView>

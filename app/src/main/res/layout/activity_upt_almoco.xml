@@ -1,35 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:background="@drawable/fundo"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:fontFamily="sans-serif-light"
+    android:textSize="18pt"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbtipoalmoco"/>
-    <EditText
-        android:id = "@+id/tipoAlmoco"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:inputType = "text" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lbdescricao"/>
-    <EditText
-        android:id = "@+id/descricaoAlmoco"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:inputType = "text" />
-    <Button
-        android:id = "@+id/btalterar"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:text = "@string/btalterar" />
-    <Button
-        android:id = "@+id/btexcluir"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:text = "@string/btexcluir" />
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#FFF44336"
+            android:text="@string/lbtipoalmoco"/>
+        <EditText
+            android:id = "@+id/tipoAlmoco"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_almoco"
+            android:inputType = "text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="#FFF44336"
+            android:text="@string/lbdescricao"/>
+        <EditText
+            android:id = "@+id/descricaoAlmoco"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_almoco"
+            android:inputType = "text" />
+        <Button
+            android:id = "@+id/btalterar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="#FFF44336"
+            android:layout_margin="5dp"
+            android:text = "@string/btalterar" />
+        <Button
+            android:id = "@+id/btexcluir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:background="#FFF44336"
+            android:layout_margin="5dp"
+            android:text = "@string/btexcluir" />
+    </LinearLayout>
+</ScrollView>

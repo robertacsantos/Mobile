@@ -1,59 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:background="@drawable/backpedido"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Almoço"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Almoço"
+            android:textColor="#3A5108" />
 
 
-    <Spinner
-        android:id="@+id/spinneralmoco"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog" />
+        <Spinner
+            android:id="@+id/spinneralmoco"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_pedido"
+            android:spinnerMode="dialog" />
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Bebida"
+            android:textColor="#3A5108" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Bebida" />
+        <Spinner
+            android:id="@+id/spinnerbebida"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_pedido"
+            android:spinnerMode="dialog" />
 
-    <Spinner
-        android:id="@+id/spinnerbebida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descrição" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Descrição"
+            android:textColor="#3A5108" />
 
 
-    <EditText
-        android:id="@+id/descricaoPedido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text" />
+        <EditText
+            android:id="@+id/descricaoPedido"
+            android:layout_width="333dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_pedido"
+            android:inputType="text" />
 
-    <Button
-        android:id="@+id/btinserir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Adicionar Pedido" />
+        <Button
+            android:id="@+id/btinserir"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#3A5108"
+            android:text="Adicionar Pedido"
+            android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/btlistar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listar"/>
+        <Button
+            android:id="@+id/btlistar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#3A5108"
+            android:text="Listar"
+            android:textColor="#FFFFFF" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
