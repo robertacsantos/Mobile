@@ -27,3 +27,6 @@ Foi utilizado as seguintes ferramentas:
 | Plugin | README |
 | ------ | ------ |
 | Gradle | [https://github.com/gradle/gradle/blob/master/README.md] |
+
+### Video
+[https://www.loom.com/share/39822fa5b0c6456bb86b28a33b819f38]
